@@ -8,5 +8,8 @@ RUN pip install --no-cache-dir mcp-proxy==0.8.2
 ENV MCP_URL=https://api.carbon-cashmere.de/mcp/
 ENV PYTHONUNBUFFERED=1
 
-# Default command: stdio ↔ streamable-HTTP bridge
-CMD ["sh", "-c", "mcp-proxy \"$MCP_URL\""]
+# Default command: stdio ↔ streamable-HTTP bridge.
+# --transport streamablehttp is required because our upstream endpoint speaks
+# MCP over Streamable HTTP. mcp-proxy defaults to SSE which hangs on a
+# streamable-HTTP endpoint during handshake.
+CMD ["sh", "-c", "mcp-proxy --transport streamablehttp \"$MCP_URL\""]
