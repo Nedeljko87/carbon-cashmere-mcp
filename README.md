@@ -12,8 +12,8 @@ Professional crypto trading intelligence MCP server with **104 tools** covering 
 | Category | Tools |
 |----------|-------|
 | Real-time prices | 116 coins, OHLCV 15m/1h/4h/1d |
-| ML signals | V3 tsfresh ensemble, per-coin models (BTC/ETH/SOL/KAS/TAO) |
-| On-chain | Own Bitcoin Core + Kaspa + Bittensor nodes (no third-party delay) |
+| ML signals | Per-coin ML models with confidence scoring (BTC/ETH/SOL/KAS/TAO) |
+| On-chain | Direct network metrics for major chains — low latency, no aggregator drift |
 | Derivatives | Funding rates, open interest, liquidations, 730d history |
 | Technicals | RSI/MACD/BB/ADX/ATR/OBV/VWAP across intervals |
 | Volatility | GARCH(1,1), Parkinson, Garman-Klass, vol-regime |
